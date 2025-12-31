@@ -1,0 +1,1 @@
+public record HoldingRecord(String stock, int quantity, double avgPrice) {}

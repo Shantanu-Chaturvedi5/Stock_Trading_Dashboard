@@ -1,0 +1,360 @@
+/* =====================================================
+   GLOBAL THEME
+===================================================== */
+
+.root {
+    -fx-background-color: #0d0d1a;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-text-fill: #ffffff;
+}
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+.root .label {
+    -fx-text-fill: #d0d0d0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 18;
+    -fx-cursor: hand;
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,255,255,0.5), 10, 0.4, 0, 0);
+}
+
+#buyButton {
+    -fx-background-color: #26a69a;
+}
+
+#sellButton {
+    -fx-background-color: #ef5350;
+}
+
+/* =====================================================
+   TEXT FIELD (Qty, Search, etc.)
+===================================================== */
+
+.text-field {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-border-color: #00ffff;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-highlight-fill: #00ffff;
+    -fx-highlight-text-fill: #000000;
+    -fx-caret-color: #00ffff;
+}
+
+/* =====================================================
+   COMBO BOX
+===================================================== */
+
+.combo-box {
+    -fx-background-color: #1a1a2e;
+    -fx-border-color: #00ffff;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.combo-box-base {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #1a1a2e;
+    -fx-text-fill: #ffffff;
+}
+.combo-box .list-cell:selected {
+    -fx-text-fill: #ffffff;
+}
+
+
+.combo-box .list-cell:filled:selected,
+.combo-box .list-cell:filled:hover {
+    -fx-background-color: #00ffff;
+    -fx-text-fill: #000000;
+}
+
+/* =====================================================
+   TABLE VIEW
+===================================================== */
+
+
+.table-view .column-header {
+    -fx-size: 32;
+    -fx-background-color: #222244;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #00ffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+.table-view .placeholder .label {
+    -fx-text-fill: #aaaaaa;
+    -fx-font-style: italic;
+}
+
+
+/* TABLE CELLS — FIXED VISIBILITY */
+
+.table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ROW STYLES */
+
+.table-row-cell {
+    -fx-background-color: #1a1a2e;
+}
+.table-row-cell:odd {
+    -fx-background-color: #1e1e36;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #26264a;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #00ffff;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #000000;
+}
+
+/* REMOVE DEFAULT BLUE FOCUS */
+
+.table-view:focused {
+    -fx-background-insets: 0;
+}
+
+/* =====================================================
+   CHART (PRICE HISTORY)
+===================================================== */
+
+.chart {
+    -fx-background-color: #0d0d1a;
+}
+
+.chart-plot-background {
+    -fx-background-color: #0d0d1a;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3a3a3a;
+}
+
+.chart-axis {
+    -fx-tick-label-fill: #ffffff;
+    -fx-label-fill: #ffffff;
+}
+
+.chart-series-line {
+    -fx-stroke: #00ff88;
+    -fx-stroke-width: 3px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 136, 0.3), 10, 0, 0, 0);
+}
+
+.chart-legend {
+    -fx-text-fill: #ffffff;
+}
+.chart-line-symbol {
+    -fx-background-color: #ff3b3b, #0d0d1a;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+}
+
+
+/* =====================================================
+   SCROLL BAR (DARK MODE)
+===================================================== */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #444466;
+    -fx-background-radius: 6;
+}
+
+/* =====================================================
+   TOOLTIP
+===================================================== */
+
+.tooltip {
+    -fx-background-color: #222244;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-background-radius: 6;
+}
+/* ===============================
+   FORCE TABLE TEXT VISIBILITY
+================================ */
+
+.table-view .table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+}
+
+.table-view .table-row-cell:empty .table-cell {
+    -fx-text-fill: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #222244;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #00ffff;
+}
+
+/* Placeholder text */
+.table-view .placeholder .label {
+    -fx-text-fill: #888888;
+}
+
+/* Fix focus bug */
+.table-view:focused .table-row-cell:selected .table-cell {
+    -fx-text-fill: #000000;
+}
+
+/* =====================================================
+   NAVBAR (TradeSphere)
+===================================================== */
+.navbar {
+    -fx-background-color: linear-gradient(
+        to right,
+        #22003a,
+        #4b0082,
+        #7a1fd1
+    );
+
+    /* Increased height */
+    -fx-padding: 0 0 16 0;
+
+    /* Strong separation from body */
+    -fx-border-color: rgba(0, 255, 255, 0.35);
+    -fx-border-width: 0 0 2.5 0;
+
+    /* Elevated / floating look */
+    -fx-effect: dropshadow(
+        three-pass-box,
+        rgba(0, 0, 0, 0.75),
+        16,
+        0.35,
+        0,
+        6
+    );
+}
+
+
+/* =====================================================
+   BRAND TEXT
+===================================================== */
+
+#brandLabel {
+    -fx-font-family: "Segoe UI Black", "Arial Black", sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 1.5px;
+    -fx-text-fill: linear-gradient(to right, #00ffff, #66fffa, #00ffcc);
+    -fx-effect: dropshadow(gaussian, rgba(0,255,255,0.35), 10, 0.3, 0, 0);
+}
+/* FIX COMBOBOX SELECTED TEXT VISIBILITY */
+.combo-box .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13.5px;
+}
+/* IMPROVE TABLE TEXT READABILITY */
+.table-view {
+    -fx-font-family: "Segoe UI Semibold", "Roboto", sans-serif;
+}
+
+.table-cell {
+    -fx-font-weight: 500;
+}
+/* FIX CHART AXIS TEXT VISIBILITY */
+.chart-axis .tick-label {
+    -fx-text-fill: #e6e6e6;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+}
+
+.chart-axis-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+/* IMPROVE GRAPH POINT VISIBILITY */
+.chart-line-symbol {
+    -fx-background-color: #00ff88, #0d0d1a;
+    -fx-background-radius: 6px;
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,255,136,0.45), 6, 0.4, 0, 0);
+}
+/* ===============================
+   FIX WHITE TABLE BACKGROUND
+================================ */
+
+.table-view {
+    -fx-background-color: #0d0d1a;
+}
+
+.table-view .virtual-flow {
+    -fx-background-color: #0d0d1a;
+}
+
+.table-view .corner {
+    -fx-background-color: #0d0d1a;
+}
+/* ===============================
+   TABLE HEADER BACKGROUND FIX
+================================ */
+
+.table-view .column-header-background {
+    -fx-background-color: #0d0d1a;
+}
+
+.table-view .column-header {
+    -fx-background-color: #0d0d1a;
+    -fx-border-color: #2a2a40;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #00e5ff;
+    -fx-font-weight: bold;
+}
+
+/* right-side filler area */
+.table-view .filler {
+    -fx-background-color: #0d0d1a;
+}
+.table-title {
+    -fx-font-size: 18px;    /* increase as needed */
+    -fx-font-weight: bold;
+}
