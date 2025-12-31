@@ -54,7 +54,7 @@ public class TradingDashboardFX extends Application {
     @Override
     public void start(Stage stage) {
 
-        /* ================= NAVBAR ================= */
+        /* NAVBAR */
         Label brandLabel = new Label("TradeSphere");
         brandLabel.setId("brandLabel");
         brandLabel.setStyle(
@@ -79,7 +79,7 @@ public class TradingDashboardFX extends Application {
                 "-fx-border-width: 0 0 1 0;"
         );
 
-        /* ================= TICKER ================= */
+        /* TICKER */
         tickerContent = new HBox(50);
         tickerContent.setAlignment(Pos.CENTER_LEFT);
 
@@ -105,7 +105,7 @@ public class TradingDashboardFX extends Application {
 
         startTickerAnimation();
 
-        /* ================= CONTROLS ================= */
+        /* CONTROLS */
         stockCombo = new ComboBox<>();
         qtyField = new TextField("1");
         selectedStockLabel = new Label("Selected Stock: ₹0.0");
@@ -120,7 +120,7 @@ public class TradingDashboardFX extends Application {
         );
         controls.setAlignment(Pos.CENTER);
 
-        /* ================= TABLES & CHART ================= */
+        /* TABLES & CHART */
         setupTransactionTable();
         setupPortfolioTable();
         setupPriceChart();
@@ -161,7 +161,7 @@ public class TradingDashboardFX extends Application {
         setupListeners();
     }
 
-    /* ================= TICKER ================= */
+    /* TICKER */
     private void startTickerAnimation() {
         tickerTimeline = new Timeline(
                 new KeyFrame(Duration.millis(16), e -> {
@@ -178,7 +178,7 @@ public class TradingDashboardFX extends Application {
         tickerTimeline.play();
     }
 
-    /* ================= DATA ================= */
+    /* DATA */
     private void populateStockComboBox() {
         try {
             HttpURLConnection conn =
@@ -235,7 +235,7 @@ public class TradingDashboardFX extends Application {
         sellButton.setOnAction(e -> new Thread(() -> handleTrade("SELL")).start());
     }
 
-    /* ================= CORE FIX ================= */
+    /* CORE WORKING */
     private void handleTrade(String type) {
         String stock = stockCombo.getValue();
         int qty = Integer.parseInt(qtyField.getText());
@@ -280,7 +280,7 @@ public class TradingDashboardFX extends Application {
         });
     }
 
-    /* ================= TABLES ================= */
+    /* TRANSACTION AND PORTFOLIO TABLES */
     private void setupTransactionTable() {
         transactionTable = new TableView<>(transactions);
 
